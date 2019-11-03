@@ -9,10 +9,33 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=15GGOkq0tM8bdgglU_LLgjhAxh48DUzmG'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1nZ0SoC0NRVzUcR6BKts52VVmHs6bqcM9'
 export_file_name = 'export.pkl'
 
-classes = ['happy', 'unhappy']
+classes = ['Activewear',
+ 'Bottomwear',
+ 'Dresses',
+ 'Dungarees',
+ 'Ethnicwear',
+ 'Fullbodywear',
+ 'Innerwear_and_Sleepwear',
+ 'Jackets',
+ 'Jeans',
+ 'Jeggings',
+ 'Jumpsuits_and_Bodysuits',
+ 'Lingerie_and_Sleepwear',
+ 'Pants',
+ 'Shirts',
+ 'Shorts',
+ 'Skirts',
+ 'Suits',
+ 'Swimwear',
+ 'Tops',
+ 'Tshirts',
+ 'Upperwear(inner)',
+ 'Upperwear(outer)',
+ 'female',
+ 'male']
 path = Path(__file__).parent
 
 app = Starlette()
