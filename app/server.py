@@ -9,8 +9,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.googleapis.com/drive/v3/files/1nZ0SoC0NRVzUcR6BKts52VVmHs6bqcM9?alt=media&key=AIzaSyCFGD31ESA7iEMgFuSVFJF_WRH-CUGaRBI'
-export_file_name = 'export.pkl'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1-6OmqUZtn7ESuldhZIXsu-_M5W7fEblb'
+export_file_name = 'scratch_detector_0_0.pkl'
 
 classes = ['Activewear',
  'Bottomwear',
