@@ -22,6 +22,9 @@ app = Flask(__name__, static_url_path='')
 app.secret_key = secrets.token_urlsafe(16)
 CORS(app)
 
+export_file_url = 'https://drive.google.com/uc?export=download&id=1-6OmqUZtn7ESuldhZIXsu-_M5W7fEblb'
+export_file_name = 'scratch_detector.pkl'
+
 app.debug = True
 app.env = 'development'
 # app.config['SESSION_TYPE'] = 'filesystem'
@@ -170,7 +173,8 @@ def damage_check():
         return make_response(jsonify(send_data), 200)
 
 
-def setup_learner():
+async def setup_learner():
+    await download_file(export_file_url, path / export_file_name)
     try:
         learn = load_learner(app.config['MODEL_FOLDER'], 'scratch_detector.pkl')
         return learn
